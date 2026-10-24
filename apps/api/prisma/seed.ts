@@ -36,6 +36,21 @@ async function main() {
       update: {},
       create: { name: "Beauty", slug: "beauty", icon: "💄" },
     }),
+    prisma.category.upsert({
+      where: { slug: "clothes" },
+      update: {},
+      create: { name: "Clothes", slug: "clothes" },
+    }),
+    prisma.category.upsert({
+      where: { slug: "shoes" },
+      update: {},
+      create: { name: "Shoes", slug: "shoes" },
+    }),
+    prisma.category.upsert({
+      where: { slug: "perfume" },
+      update: {},
+      create: { name: "Perfume", slug: "perfume" },
+    }),
   ]);
 
   console.log("✅ Categories created");
